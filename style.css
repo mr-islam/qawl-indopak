@@ -42,6 +42,7 @@ img.resize {
 	height: auto;
 	background-color: transparent;
 	border: none;
+	padding: 2%;
 }
 div.footerControls {
 	display: flex;

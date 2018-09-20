@@ -3,8 +3,9 @@ const Analytics = require("electron-ga").Analytics;
 const analytics = new Analytics('UA-120295167-1');
 const Mousetrap = require('mousetrap');
 const dragscroll = require('dragscroll');
+const tippy = require('tippy.js');
 
-var rightPageNumber = localStorage.getItem("rightPageNumberStored") || 3;
+var rightPageNumber = localStorage.getItem("rightPageNumberStored") || 2;
 var leftPageNumber = parseInt(rightPageNumber) + 1;
 var rightPageElement = document.getElementById("rightPage");
 var leftPageElement = document.getElementById("leftPage");
@@ -24,11 +25,11 @@ function applyPage() {
 function checkPage() { // generic function called by specific user actions, gateway to applyPage
 	if (userPageInputInt < 605 && userPageInputInt > -1) { // ensures possible page
 		if (userPageInputInt % 2 === 0) {
-			leftPageNumber = userPageInputInt;
-			rightPageNumber = leftPageNumber - 1;
-		} else {
 			rightPageNumber = userPageInputInt;
 			leftPageNumber = parseInt(rightPageNumber) + 1;
+		} else {
+			leftPageNumber = userPageInputInt;
+			rightPageNumber = leftPageNumber - 1;
 		}
 	}
 }
@@ -141,11 +142,11 @@ function toggleFullscreen() {
 }
 
 var idleOverlay = function () {
-	document.removeEventListener('mousemove', myListener, false);
+	document.removeEventListener('mousemove', idleOverlay, false);
 	document.getElementById("overlay").style.display = "none";
     setTimeout(function() {
 		document.getElementById("overlay").style.display = "block";
-		document.addEventListener('mousemove', myListener, false);
+		document.addEventListener('mousemove', idleOverlay, false);
     }, 600000);
 };
 document.getElementById("overlay").style.display = "none";
