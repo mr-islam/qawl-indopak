@@ -1,0 +1,136 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html { 
+	height: 100%;
+}
+body { 
+	zoom: 110%;
+	min-height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	cursor: pointer;
+}
+#wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	max-width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+}
+img.resize {
+	max-width: 50%;
+	height: auto;
+	background-color: transparent;
+	border: none;
+}
+div.footerControls {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	height: 5%;
+}
+div.footerPageOptions, div.footerSettings {
+	display: flex;
+	flex-direction: row;
+}
+input {
+	text-align: center;
+	height: 100%;
+	background: none;
+	font-size: 16px;
+	width: 200px;
+	border: none;
+}
+select {
+	text-align: center;
+	text-align-last:center;
+	border: none;
+	height: 100%;
+	background-color: transparent;
+	font-size: 16px;
+}
+option {
+	background-color: transparent;
+}
+button {
+	background:none;
+	box-shadow: none;
+	font-size: 17px;
+	border: none;
+	min-height: 100%;
+}
+button:focus {
+	outline: none;
+}
+img {
+	image-rendering: -webkit-optimize-contrast;
+	padding-bottom: 2.5%;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+.tippy-tooltip.tippy-backdrop-theme {
+	font-family: sans-serif;
+	font-size: 14px;
+}
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+	z-index: 2; /* Specify a stack order in case you're using a different order for */
+}
+.overlayContents {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    transform: translate(-50%,-50%);
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	border-radius: 2px;
+	padding: 5%;
+	text-align: center;
+}
+#logo {
+	max-width: 16%;
+	max-height: 9%;
+}
+h1 {
+	font-size: 42px;
+	font-family: sans-serif;
+	font-weight: bolder;
+}
+p {
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: lighter;
+}

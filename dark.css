@@ -1,0 +1,41 @@
+body {
+    background-color: #002b36;
+}
+div.footerControls {
+    background:rgba(0,0,0,0.8);
+}
+input {
+    color: #6c71c4;
+}
+select {
+    color: #6c71c4;
+}
+option {
+    color: #6c71c4;
+}
+button {
+    color: #6c71c4;
+}
+button:hover {
+    background:rgba(7,54,66,0.8);
+	color: #6c71c4;
+}
+img {
+    filter: invert(1);
+}
+.tippy-tooltip.tippy-backdrop-theme {
+    background:#000;
+    color: #6c71c4;
+}
+#overlay {
+    background-color: #073642;
+}
+.overlayContents {
+    background-color: #002b36;
+}
+h1 {
+    color: #93a1a1
+}
+p {
+    color: #586e75
+}
