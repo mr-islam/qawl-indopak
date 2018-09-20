@@ -1,0 +1,13 @@
+import { Item } from './types';
+export declare const getAppName: () => string;
+export declare const getAppVersion: () => string;
+export declare const getClientId: () => string;
+export declare const getLanguage: () => string;
+export declare const getUserAgent: () => string;
+export declare const getViewport: () => string;
+export declare const getScreenResolution: () => string;
+export declare const getNow: () => number;
+export declare const getCache: () => Item[];
+export declare const setCache: (cache: object[]) => void;
+export declare const retry: (cb: Function, schedule: number) => number;
+export declare const fetch: (url: any, options: any) => Promise<Response>;
